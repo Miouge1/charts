@@ -6,6 +6,7 @@ metadata:
     heritage: {{.Release.Service | quote }}
     release: {{.Release.Name | quote }}
     chart: "{{.Chart.Name}}-{{.Chart.Version}}"
+    component: "{{ .Release.Name }}-{{ .Values.Component }}"
   annotations:
     # This is what defines this resource as a hook. Without this line, the
     # job is considered part of the release.
